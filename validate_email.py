@@ -5,7 +5,7 @@ def validate_email(email: str) -> bool:
     """
         xxx.x.xx@sberbank.ru   
     """
-    regex = re.compile(r"^[a-zA-Z0-9]{3}+\.[a-zA-Z0-9]{1}+\.[a-zA-Z0-9]{2}@sberbank\.ru$")
+    regex = re.compile(r"^[a-zA-Z0-9]{1-3}+\.{0,1}[a-zA-Z0-9]{1}+\.{0,1}[a-zA-Z0-9]{1-2}@sberbank\.ru$")
     return re.match(regex, email) is not None
 
 
